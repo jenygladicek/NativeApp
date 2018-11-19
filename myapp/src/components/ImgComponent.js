@@ -5,7 +5,8 @@ import { Actions } from 'react-native-router-flux'
 export default class ImgComponent extends Component{
   render() {
     onPressGo = ()=>{
-      Actions.signup()
+      Actions.loader();
+      setTimeout(()=>Actions.signup(),1000);   
     }
     return (
       <View style={styles.conntainer}>
