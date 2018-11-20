@@ -1,16 +1,16 @@
 import React, {Component} from 'react';
-import {StyleSheet,View,Text,Button,Image,TouchableOpacity} from 'react-native';
-import { Actions } from 'react-native-router-flux'
+import {StyleSheet,View,Image,TouchableOpacity} from 'react-native';
 
 export default class ImgComponent extends Component{
   render() {
+    const navigator = this.props.navigation;
     onPressGo = ()=>{
-      Actions.loader();
-      setTimeout(()=>Actions.signup(),1000);   
+      navigator.navigate('loader');
+      setTimeout(()=>navigator.navigate('signup'),1000);   
     }
     return (
       <View style={styles.conntainer}>
-      <TouchableOpacity onPress={onPressGo}><Image source = {require('../images/img1.jpg')}/></TouchableOpacity>
+        <TouchableOpacity onPress={onPressGo}><Image source = {require('../images/img1.jpg')}/></TouchableOpacity>
       </View>
     );
   }

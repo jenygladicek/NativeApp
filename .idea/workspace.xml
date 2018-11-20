@@ -8,6 +8,10 @@
   <component name="ChangeListManager">
     <list default="true" id="37263044-ceef-4cf6-b8e9-48bd177ee928" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/Routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/src/components/ImgComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/src/components/ImgComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myapp/src/components/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/src/components/SignUp.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

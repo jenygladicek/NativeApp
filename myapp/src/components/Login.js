@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet,View,Text,Button,Image,TouchableOpacity,TextInput} from 'react-native';
-import { Actions } from 'react-native-router-flux';
+import {StyleSheet,View,Text,Button,TextInput} from 'react-native';
 
 export default class Otp extends Component{
     constructor(props) {
@@ -8,22 +7,26 @@ export default class Otp extends Component{
         this.state = { RMobNo: '',RPassword  : '',buttonDisabled : true};
       }
   render() {
-    handleRMobNo = ()=>{
-        this.setState({'RMobNo' : psw})
+      const navigator = this.props.navigation;
+    handleRMobNo = (mobNo)=>{
+        this.setState({'RMobNo' : mobNo})
     }
     handleRPassword = (psw) =>{
         this.setState({'RPassword' : psw})
     }
     onPressSignIn = () =>{
-        Actions.homepage();
+        navigator.navigate('homepage');
+    }
+    onPressSignUp = () =>{
+        navigator.navigate('signup');
     }
     return (
         <View style={styles.conntainer}>
-        <Text style={styles.text}>Registered MooON Mobile Number</Text><TextInput style={styles.input} value={this.state.RMobNo} onChangeText={mNo => this.setState({RMobNo : mNo})} keyboardType="numeric"></TextInput>
-        <Text style={styles.text}>MooON Password</Text><TextInput style={styles.input} value={this.state.RPassword} onChangeText={psw => this.setState({RPassword : psw})} secureTextEntry={true}></TextInput>
+        <Text style={styles.text}>Registered MooON Mobile Number</Text><TextInput style={styles.input} value={this.state.RMobNo} onChangeText={mNo => handleRMobNo(mNo)} keyboardType="numeric"></TextInput>
+        <Text style={styles.text}>MooON Password</Text><TextInput style={styles.input} value={this.state.RPassword} onChangeText={psw => handleRPassword(psw)} secureTextEntry={true}></TextInput>
         <Text style={{textAlign:'right'}}>Forgot?</Text>
         <View style={{marginTop:20,marginBottom:20}}><Button color='#009887' onPress={onPressSignIn} title='Sign In' disabled={!this.state.RMobNo || ! this.state.RPassword}></Button></View>
-        <View style={{marginTop:20,marginBottom:20,justifyContent : 'center',alignItems : 'center'}}><Text style={styles.text} onPress={()=>Actions.signup()}>New Member? Sign Up</Text></View>
+        <View style={{marginTop:20,marginBottom:20,justifyContent : 'center',alignItems : 'center'}}><Text style={styles.text} onPress={onPressSignUp}>New Member? Sign Up</Text></View>
         </View>
     );
   }

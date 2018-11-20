@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet,View,Text,Button,Image,TouchableOpacity,TextInput} from 'react-native';
-import { Actions } from 'react-native-router-flux';
+import {StyleSheet,View,Text,Button,TextInput} from 'react-native';
 
 export default class Otp extends Component{
     constructor(props) {
@@ -8,8 +7,9 @@ export default class Otp extends Component{
         this.state = { Password: '' };
       }
   render() {
+    const navigator = this.props.navigation;
     onPressSubmit = ()=>{
-      Actions.login()
+        navigator.navigate('login');
     }
     return (
         <View style={styles.conntainer}>

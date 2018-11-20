@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import {StyleSheet,View,Text,Button,Image,TouchableOpacity,TextInput} from 'react-native';
-import { Actions } from 'react-native-router-flux';
+import {StyleSheet,View,Text,Button} from 'react-native';
 import OtpInputs from 'react-native-otp-inputs'
 
 export default class Otp extends Component{
   render() {
+    const navigator = this.props.navigation;
     onPressVerify = ()=>{
-      Actions.passwordPage()
+      navigator.navigate('passwordPage');
     }
     return (
       <View style={styles.conntainer}>
