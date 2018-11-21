@@ -11,8 +11,10 @@
       <change beforePath="$PROJECT_DIR$/myapp/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/Routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myapp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myapp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/src/components/ImgComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/src/components/ImgComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/src/components/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/src/components/SignUp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/src/components/FarmAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/src/components/FarmAdmin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/src/components/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/src/components/HomePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/src/components/Offline.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/src/components/Offline.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/src/components/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/src/components/Profile.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,8 +41,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane" />
     </panes>
@@ -132,16 +134,16 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info id="Captures" order="2" weight="0.25" />

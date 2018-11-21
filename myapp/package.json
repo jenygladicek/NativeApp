@@ -12,6 +12,7 @@
     "react-native-confirmation-code-input": "^1.0.4",
     "react-native-otp-inputs": "^1.0.0",
     "react-native-router-flux": "^4.0.6",
+    "react-native-vector-icons": "^6.1.0",
     "react-navigation": "^2.18.2"
   },
   "devDependencies": {
