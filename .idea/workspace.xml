@@ -8,13 +8,10 @@
   <component name="ChangeListManager">
     <list default="true" id="37263044-ceef-4cf6-b8e9-48bd177ee928" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/Routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myapp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myapp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/src/components/FarmAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/src/components/FarmAdmin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/src/components/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/src/components/HomePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/src/components/Offline.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/src/components/Offline.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/src/components/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/src/components/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/src/components/ImgComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/src/components/ImgComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/src/components/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/src/components/SignUp.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,10 +38,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -133,7 +130,7 @@
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" visible="true" weight="0.32900432" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />

@@ -1,16 +1,19 @@
 import React, {Component} from 'react';
 import {StyleSheet,View,Image,TouchableOpacity} from 'react-native';
 
-export default class ImgComponent extends Component{
-  render() {
+class ImgComponent extends Component{
+  constructor(props){
+    super(props);
+  } 
+  onPressGo =() =>{
     const navigator = this.props.navigation;
-    onPressGo = ()=>{
-      navigator.navigate('loader');
-      setTimeout(()=>navigator.navigate('signup'),1000);   
-    }
+    navigator.navigate('loader');
+    setTimeout(()=>navigator.navigate('signup'),1000);   
+  };
+  render() {
     return (
       <View style={styles.conntainer}>
-        <TouchableOpacity onPress={onPressGo}><Image source = {require('../images/img1.jpg')}/></TouchableOpacity>
+        <TouchableOpacity onPress={this.onPressGo}><Image source = {require('../images/img1.jpg')}/></TouchableOpacity>
       </View>
     );
   }
@@ -25,3 +28,4 @@ const styles = StyleSheet.create({
   }
 });
 
+export default ImgComponent;

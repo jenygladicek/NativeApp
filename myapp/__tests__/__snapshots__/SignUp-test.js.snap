@@ -1,0 +1,157 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Signup Component checking whether renders without change by matching previous snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#FFFFFF",
+      "flex": 1,
+      "padding": 20,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "grey",
+        "fontSize": 15,
+      }
+    }
+  >
+    Mobile Number
+  </Text>
+  <TextInput
+    allowFontScaling={true}
+    id="mobNo"
+    keyboardType="numeric"
+    name="text"
+    onChangeText={[Function]}
+    style={
+      Object {
+        "borderBottomColor": "grey",
+        "borderBottomWidth": 1,
+      }
+    }
+    underlineColorAndroid="transparent"
+    value=""
+  />
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "marginBottom": 20,
+        "marginTop": 20,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignSelf": "flex-start",
+            "borderColor": "red",
+            "borderWidth": 1,
+          },
+          undefined,
+        ]
+      }
+    />
+    <Text
+      style={
+        Object {
+          "color": "grey",
+          "fontSize": 15,
+        }
+      }
+    >
+      I agree to Stellapps Terms of Use and Privacy Policy
+    </Text>
+  </View>
+  <View
+    accessibilityRole="button"
+    accessibilityStates={
+      Array [
+        "disabled",
+      ]
+    }
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {},
+          Object {},
+        ]
+      }
+    >
+      <Text
+        disabled={true}
+        style={
+          Array [
+            Object {
+              "color": "#007AFF",
+              "fontSize": 18,
+              "padding": 8,
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#009887",
+            },
+            Object {
+              "color": "#cdcdcd",
+            },
+          ]
+        }
+      >
+        Sign Up
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+        "marginBottom": 20,
+        "marginTop": 20,
+      }
+    }
+  >
+    <Text
+      onPress={[Function]}
+      style={
+        Object {
+          "color": "grey",
+          "fontSize": 15,
+        }
+      }
+    >
+      Already Member? Sign In
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+        "marginBottom": 20,
+        "marginTop": 20,
+      }
+    }
+  >
+    <Text />
+  </View>
+</View>
+`;

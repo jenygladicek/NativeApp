@@ -5,7 +5,7 @@ export default class Loader extends Component{
   render() {
     return (
       <View style={styles.conntainer}>
-        <TouchableOpacity onPress={onPressGo}><Image source = {require('../images/img2.jpg')}/></TouchableOpacity>
+        <TouchableOpacity><Image source = {require('../images/img2.jpg')}/></TouchableOpacity>
       </View>
     );
   }

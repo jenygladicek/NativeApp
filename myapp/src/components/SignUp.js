@@ -6,12 +6,8 @@ export default class ImgComponent extends Component{
         super(props);
         this.state = { text: '' ,checked : false,buttonDisabled : true,agree : false};
       }
-  render() {
-    const navigator = this.props.navigation;
-    const otpmsg = <Text>You'll receive an SMS to verify your phone number</Text>;
-    const emptymsg = <Text></Text>;
-
-    onPressSignUp = () => {
+      onPressSignUp = () => {
+        const navigator = this.props.navigation;
         navigator.navigate('otp');
     }
     changeMobNo = (mobNo) => {
@@ -24,15 +20,17 @@ export default class ImgComponent extends Component{
         else 
             Alert.alert('','Please enter mobile number and check I agree',[{text: "Ok", onPress: () =>this.setState({checked : false})}])
     }
-
+  render() {   
+    const otpmsg = <Text>You'll receive an SMS to verify your phone number</Text>;
+    const emptymsg = <Text></Text>;
     return (
       <View style={styles.conntainer}>
-        <Text style={styles.text}>Mobile Number</Text><TextInput style={styles.input} value={this.state.text} onChangeText={(text)=> changeMobNo(text)} keyboardType="numeric"></TextInput>
+        <Text style={styles.text}>Mobile Number</Text><TextInput id='mobNo' name='text' style={styles.input} value={this.state.text} onChangeText={(text)=> this.changeMobNo(text)} keyboardType="numeric"></TextInput>
         <View style={{flexDirection : 'row',marginTop:20,marginBottom:20}}>
-            <CheckBox value={this.state.checked} onValueChange={(checkval)=>changeCheckBox(checkval)}/>
+            <CheckBox value={this.state.checked} onValueChange={(checkval)=>this.changeCheckBox(checkval)}/>
             <Text style={styles.text}>I agree to Stellapps Terms of Use and Privacy Policy</Text>
         </View>
-        <Button color='#009887' onPress={onPressSignUp} title='Sign Up' disabled={(!this.state.text || !this.state.checked) || !this.state.agree}></Button>
+        <Button color='#009887' onPress={this.onPressSignUp} title='Sign Up' disabled={(!this.state.text || !this.state.checked) || !this.state.agree}></Button>
         <View style={{marginTop:20,marginBottom:20,justifyContent : 'center',alignItems : 'center'}}><Text style={styles.text} onPress={()=>navigator.navigate('login')}>Already Member? Sign In</Text></View>
         <View style={{marginTop:20,marginBottom:20,justifyContent : 'center',alignItems : 'center'}}>{this.state.agree ? otpmsg : emptymsg }</View>
       </View>
