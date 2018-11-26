@@ -1,6 +1,6 @@
 import React from 'react';
 import {Image,TouchableOpacity,Text} from 'react-native';
-import { StackNavigator,DrawerNavigator} from 'react-navigation';
+import { createStackNavigator} from 'react-navigation';
 import Icon from "react-native-vector-icons/FontAwesome5";
 
 import Home from './components/ImgComponent';
@@ -9,9 +9,9 @@ import Otp from './components/Otp';
 import PasswordPage from './components/PasswordPage';
 import Login from './components/Login';
 import Loader from  './components/Loader';
-import HomePage from './components/HomePage';
+import Drawer from './DrawerNavigator';
 
-const Routes = StackNavigator({
+const Routes = createStackNavigator({
    home : {screen : Home},
    signup : {screen : SignUp,            
          navigationOptions: {
@@ -61,19 +61,17 @@ const Routes = StackNavigator({
          fontWeight: "bold"
          }
    }},
-   homepage : {screen : HomePage,
-    navigationOptions:({navigation}) => ({
-       title: "Welcome",
-       //headerLeft : <TouchableOpacity onPress={() => navigation.navigate('DrawerOpen')}><Text style={{color:'white'}}>Menu</Text></TouchableOpacity>,
-       headerStyle: {
-       backgroundColor: "#212121"
-       },
-       headerTintColor: "#fff",
-       headerTitleStyle: {
-       fontWeight: "bold"
-       }
-    })
-    },
+   drawerStack : {screen : Drawer , navigationOptions:({navigation}) => ({
+      headerLeft:<TouchableOpacity onPress={() => navigation.openDrawer()}><Icon name="bars" style={{color:'white',marginLeft:20}} size={20}/></TouchableOpacity>,
+      headerStyle: {
+      backgroundColor: "#212121"
+      },
+      headerTitle : 'Welcome',
+      headerTintColor: "#fff",
+      headerTitleStyle: {
+      fontWeight: "bold"
+      }
+  })},
    loader : {screen : Loader}
 },{
    initialRouteName: "home"
