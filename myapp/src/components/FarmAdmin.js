@@ -11,8 +11,8 @@ export default class FarmAdmin extends Component{
     }
     return (
         <View style={{flex : 1}}>
-            <View style={{flex : 1}}>
-                <TouchableOpacity><TextInput style={{backgroundColor : '#FFFFFF',margin:10}} placeholder='Search Cattle'></TextInput></TouchableOpacity>
+            <View style={{flex : 2}}>
+                <TextInput style={{backgroundColor : '#FFFFFF',margin:10}} placeholder='Search Cattle'></TextInput>
             </View>
             <View style={styles.view2}>
                 <Text style={styles.text}>Home/Farm Admin</Text>
@@ -36,7 +36,7 @@ export default class FarmAdmin extends Component{
 
 const styles = StyleSheet.create({
     text : {
-        fontSize : 15,
+        fontSize : 12,
         color : 'grey'
     },
     view2:{

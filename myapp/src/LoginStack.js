@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image,TouchableOpacity,Text} from 'react-native';
+import {Image,TouchableOpacity} from 'react-native';
 import { createStackNavigator} from 'react-navigation';
 import Icon from "react-native-vector-icons/FontAwesome5";
 
@@ -12,7 +12,7 @@ import Loader from  './components/Loader';
 import Drawer from './DrawerNavigator';
 
 const Routes = createStackNavigator({
-   home : {screen : Home},
+   home : {screen : Home, navigationOptions: { header:null}},
    signup : {screen : SignUp,            
          navigationOptions: {
             title: "Product Logo",
@@ -62,17 +62,9 @@ const Routes = createStackNavigator({
          }
    }},
    drawerStack : {screen : Drawer , navigationOptions:({navigation}) => ({
-      headerLeft:<TouchableOpacity onPress={() => navigation.openDrawer()}><Icon name="bars" style={{color:'white',marginLeft:20}} size={20}/></TouchableOpacity>,
-      headerStyle: {
-      backgroundColor: "#212121"
-      },
-      headerTitle : 'Welcome',
-      headerTintColor: "#fff",
-      headerTitleStyle: {
-      fontWeight: "bold"
-      }
+     header : null
   })},
-   loader : {screen : Loader}
+   loader : {screen : Loader,navigationOptions: { header:null}}
 },{
    initialRouteName: "home"
 });

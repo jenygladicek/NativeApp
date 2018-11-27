@@ -8,7 +8,7 @@ export default class HomePage extends Component{
 
   render() {
       return(
-        <Text>Home Page</Text>
+        <Text>Change Password Screen</Text>
       );
   }
 }

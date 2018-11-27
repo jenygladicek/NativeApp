@@ -1,80 +1,56 @@
 import React, {Component} from 'react';
-import {StyleSheet,Text,View,TouchableOpacity,Image,TextInput} from 'react-native';
+import {Text,View,Image} from 'react-native';
 
-export default class FarmAdmin extends Component{
+import Icon from "react-native-vector-icons/FontAwesome5";
+
+export default class Profile extends Component{
     constructor(props) {
         super(props);
       }
+      static navigationOptions = ({navigation}) =>{
+        return{
+            headerTitle  : 'Profile Details'
+        }
+    }
   render() {
     onPressGo = () =>{
         console.log('hi');
     }
     return (
         <View style={{flex : 1}}>
-            <View style={{flex : 1}}>
-                <TouchableOpacity><TextInput style={{backgroundColor : '#FFFFFF',margin:10}} placeholder='Search Cattle'></TextInput></TouchableOpacity>
+            <View style={{flex : 2,backgroundColor:'#FFFFFF',marginBottom:20}}>
+               <Text style={{fontSize:12,color : 'grey'}}>Home/Profile Details</Text>
+                <View style={{flexDirection:'row'}}>
+                    <View style={{flex : 2}}><Image source={require('../images/profilepic.jpg')}></Image></View>
+                    <View style={{flex : 3}}><Text style={{fontSize:15,marginTop:40,fontWeight:'bold',paddingLeft:15}}> John Doe</Text></View>
+                    <View style={{flex : 1}}><Text style={{fontSize:15,marginTop:40,fontSize:10,paddingLeft:15}}>Edit</Text></View>
+                </View>
             </View>
-            <View style={styles.view2}>
-                <Text style={styles.text}>Home/Farm Admin</Text>
-                <TouchableOpacity onPress={onPressGo} style={styles.view2Container}><Image source = {require('../images/farmImage1.jpg')}/><Text style={styles.view2Text5}>My Account</Text><Text style={styles.symbol}>></Text></TouchableOpacity>
-                <TouchableOpacity onPress={onPressGo} style={styles.view2Container}><Image source = {require('../images/farmImage2.jpg')}/><Text style={styles.view2Text5}>Animal Settings</Text><Text style={styles.symbol}>></Text></TouchableOpacity>
-                <TouchableOpacity onPress={onPressGo} style={styles.view2Container}><Image source = {require('../images/farmImage3.jpg')}/><Text style={styles.view2Text2}>Health</Text><Text style={styles.symbol}>></Text></TouchableOpacity>
-                <TouchableOpacity onPress={onPressGo} style={styles.view2Container}><Image source = {require('../images/farmImage4.jpg')}/><Text style={styles.view2Text8}>Breed</Text><Text style={styles.symbol}>></Text></TouchableOpacity>
-                <TouchableOpacity onPress={onPressGo} style={styles.view2Container}><Image source = {require('../images/farmImage5.jpg')}/><Text style={styles.view2Text8}>Stock Management</Text><Text style={styles.symbol}>></Text></TouchableOpacity>
-                <TouchableOpacity onPress={onPressGo} style={styles.view2Container}><Image source = {require('../images/farmImage6.jpg')}/><Text style={styles.view2Text2}>Treatment Cost Settings</Text><Text style={styles.symbol}>></Text></TouchableOpacity>
-            </View>
-            <View style={styles.view3}>
-            <TouchableOpacity style={{flex:2,paddingLeft:20}}><Image source = {require('../images/farmImage7.jpg')}/></TouchableOpacity>
-            <TouchableOpacity style={{flex:2}}><Image source = {require('../images/farmImage8.jpg')}/></TouchableOpacity>
-            <TouchableOpacity style={{flex:2}}><Image source = {require('../images/farmImage9.jpg')}/></TouchableOpacity>
-            <TouchableOpacity style={{flex:2}}><Image source = {require('../images/farmImage10.jpg')}/></TouchableOpacity>
+            <View style={{flex:4,backgroundColor:'#FFFFFF',padding:20}}>
+               <View style={{flexDirection:'row'}}>
+                    <View style={{flex : 1}}><Icon name="envelope" size={17} color='#E5E5E5'/></View>
+                    <View style={{flex : 5}}><Text style={{fontSize:15,paddingLeft:15}}> johndoe@stellapps.com</Text></View>
+                    <View style={{flex : 1}}><Text style={{fontSize:15,fontSize:10,paddingLeft:15}}>Edit</Text></View>
+                </View>
+                <View style={{flexDirection:'row'}}>
+                    <View style={{flex : 1}}><Icon name="phone" size={17} color='#E5E5E5'/></View>
+                    <View style={{flex : 5}}><Text style={{fontSize:15,fontSize:10,paddingLeft:15}}>+91 123456789</Text></View>
+                    <View style={{flex : 1}}></View>
+                </View>
+                <View style={{flexDirection:'row',paddingTop:40}}>
+                    <View style={{flex : 1}}><Icon name="circle" size={17} color='#E5E5E5'/></View>
+                    <View style={{flex : 5}}><Text style={{fontSize:12,paddingLeft:15}}>Org Name : Kudlu Farm</Text></View>
+                    <View style={{flex : 1}}></View>
+                </View>
+                <View style={{flexDirection:'row'}}>
+                    <View style={{flex : 1}}><Icon name="circle" size={17} color='#E5E5E5'/></View>
+                    <View style={{flex : 5}}><Text style={{fontSize:12,fontSize:10,paddingLeft:15}}>Reporting ORg : Stellapps Technologies Pvt. Ltd</Text></View>
+                    <View style={{flex : 1}}></View>
+                </View>
             </View>
         </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
-    text : {
-        fontSize : 15,
-        color : 'grey'
-    },
-    view2:{
-        flex : 6,
-        backgroundColor : '#FFFFFF',
-        marginBottom:20,
-        padding:10
-    },
-    view3:{
-        flex : 1,
-        backgroundColor : '#FFFFFF',
-        flexDirection:'row'
-    },
-    view2Container:{
-        flexDirection: 'row',
-        margin : 12,
-        borderBottomColor:'#EFEFEF',
-        borderBottomWidth: 1
-    },
-    view2Text5 :{
-        fontWeight:'bold',
-        paddingTop : 5,
-        marginLeft:5
-    },
-    view2Text8 :{
-        fontWeight:'bold',
-        paddingTop : 5,
-        marginLeft:8
-    },
-    view2Text2 :{
-        fontWeight:'bold',
-        paddingTop : 5,
-        marginLeft:2
-    },
-    symbol:{
-        fontWeight:'bold',
-        fontSize:20,
-        marginLeft: 'auto'
-    }
-});
 
