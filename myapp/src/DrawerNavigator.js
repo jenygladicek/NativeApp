@@ -7,10 +7,10 @@ import {Container,Content,Header,Body,List} from 'native-base';
 import Home from './components/HomePage';
 import Profile from './components/Profile';
 import FarmAdministration from './components/FarmAdmin';
-import offline from './components/Offline';
+import Offline from './components/Offline';
 import LanguagePrefer from './components/LangPref';
 import ChangePassword from './components/ChangePsw';
-import AlertScreen from './components/AlertBox';
+import SignOut from './components/AlertBox';
 
 const CustomDrawerContentComponent=(props)=>(
     <Container>
@@ -36,7 +36,15 @@ const CustomDrawerContentComponent=(props)=>(
     },
     {
       navigationOptions: ({ navigation }) => ({
-        headerTitle: 'Profile Details'
+        headerLeft:<TouchableOpacity><Icon name="arrow-left" style={{color:'white',marginLeft:20}} size={20} onPress={() => { navigation.goBack(null);navigation.openDrawer() }}/></TouchableOpacity>,
+        headerStyle: {
+          backgroundColor: "#212121"
+          },
+          headerTitle : 'Profile Details',
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+          fontWeight: "bold"
+          }
       }),
     }
   );
@@ -49,7 +57,99 @@ const CustomDrawerContentComponent=(props)=>(
     },
     {
       navigationOptions: ({ navigation }) => ({
-        headerTitle: 'Farm Administration'
+        headerLeft:<TouchableOpacity><Icon name="arrow-left" style={{color:'white',marginLeft:20}} size={20} onPress={() => { navigation.goBack(null);navigation.openDrawer() }}/></TouchableOpacity>,
+        headerStyle: {
+          backgroundColor: "#212121"
+          },
+          headerTitle : 'Farm Administration',
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+          fontWeight: "bold"
+          }
+      }),
+    }
+  );
+
+  const OfflineStack = createStackNavigator(
+    {
+      Offline: {
+        screen: Offline,
+      }
+    },
+    {
+      navigationOptions: ({ navigation }) => ({
+        headerLeft:<TouchableOpacity><Icon name="arrow-left" style={{color:'white',marginLeft:20}} size={20} onPress={() => { navigation.goBack(null);navigation.openDrawer() }}/></TouchableOpacity>,
+        headerStyle: {
+          backgroundColor: "#212121"
+          },
+          headerTitle : 'Offline',
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+          fontWeight: "bold"
+          }
+      }),
+    }
+  );
+
+  const LangStack = createStackNavigator(
+    {
+      LanguagePrefer: {
+        screen: LanguagePrefer,
+      }
+    },
+    {
+      navigationOptions: ({ navigation }) => ({
+        headerLeft:<TouchableOpacity><Icon name="arrow-left" style={{color:'white',marginLeft:20}} size={20} onPress={() => { navigation.goBack(null);navigation.openDrawer() }}/></TouchableOpacity>,
+        headerStyle: {
+          backgroundColor: "#212121"
+          },
+          headerTitle : 'Language Preference',
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+          fontWeight: "bold"
+          }
+      }),
+    }
+  );
+
+  const ChangePasswordStack = createStackNavigator(
+    {
+      ChangePassword: {
+        screen: ChangePassword,
+      }
+    },
+    {
+      navigationOptions: ({ navigation }) => ({
+        headerLeft:<TouchableOpacity><Icon name="arrow-left" style={{color:'white',marginLeft:20}} size={20} onPress={() => { navigation.goBack(null);navigation.openDrawer() }}/></TouchableOpacity>,
+        headerStyle: {
+          backgroundColor: "#212121"
+          },
+          headerTitle : 'Change Password',
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+          fontWeight: "bold"
+          }
+      }),
+    }
+  );
+
+  const SignOutStack = createStackNavigator(
+    {
+      SignOut: {
+        screen: SignOut,
+      }
+    },
+    {
+      navigationOptions: ({ navigation }) => ({
+        headerLeft:<TouchableOpacity><Icon name="arrow-left" style={{color:'white',marginLeft:20}} size={20} onPress={() => { navigation.goBack(null);navigation.openDrawer() }}/></TouchableOpacity>,
+        headerStyle: {
+          backgroundColor: "#212121"
+          },
+          headerTitle : 'SignOut',
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+          fontWeight: "bold"
+          }
       }),
     }
   );
@@ -91,21 +191,21 @@ const CustomDrawerContentComponent=(props)=>(
         }
       },
     offline: {
-        screen:offline,
+        screen:OfflineStack,
           navigationOptions: {
             drawerLabel: 'Offline',
             drawerIcon: ({ tintColor }) => <Icon name="power-off" size={17} color={tintColor}/>,
           }
         },
       languageprefer: {
-          screen:LanguagePrefer,
+          screen:LangStack,
             navigationOptions: {
               drawerLabel: 'LanguagePreference',
               drawerIcon: ({ tintColor }) => <Icon name="globe" size={17} color={tintColor}/>,
             }
           },
       changepassword: {
-            screen:ChangePassword,
+            screen:ChangePasswordStack,
               navigationOptions: {
                 drawerLabel: 'ChangePassword',
                 drawerIcon: ({ tintColor }) => <Icon name="unlock-alt" size={17} color={tintColor}/>,
@@ -113,7 +213,7 @@ const CustomDrawerContentComponent=(props)=>(
             
             },
       signOut: {
-        screen: AlertScreen,
+        screen: SignOutStack,
           navigationOptions: {
             drawerLabel: 'Sign Out',
             drawerIcon: ({ tintColor }) => <Icon name="cog" size={17} color={tintColor}/>,

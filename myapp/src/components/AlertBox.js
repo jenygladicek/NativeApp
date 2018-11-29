@@ -6,7 +6,7 @@ export default class AlertBox extends Component{
         super(props);
       }
   render() {
-      let alert = Alert.alert('Confirm','Do you really want to Sign Out or remain within the application?',[{text: "Yes", onPress: () =>this.props.navigation.navigate('home')},{text: "No", onPress: () =>this.props.navigation.openDrawer()}]); 
+      let alert = Alert.alert('Confirm','Do you really want to Sign Out or remain within the application?',[{text: "Yes", onPress: () =>this.props.navigation.navigate('home')},{text: "No", onPress: () =>{this.props.navigation.navigate('homepage');this.props.navigation.openDrawer()}}]); 
     return (
        <Text> {alert}</Text>
     );
